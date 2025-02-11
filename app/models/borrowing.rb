@@ -2,13 +2,14 @@ class Borrowing < ApplicationRecord
   belongs_to :user
   belongs_to :book
 
-  validates :book, uniqueness: { scope: :returned, message: "is already borrowed" }, unless: :returned
-
-  before_create :set_due_date
+  # Ensure a book cannot be borrowed if it's already borrowed
+  validate :book_availability
 
   private
 
-  def set_due_date
-    self.due_date = Time.zone.now + 2.weeks
+  def book_availability
+    if book.borrowings.where(returned_at: nil).exists?
+      errors.add(:book, "is already borrowed")
+    end
   end
 end
