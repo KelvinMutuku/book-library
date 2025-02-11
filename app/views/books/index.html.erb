@@ -1,6 +1,9 @@
-<h1>Available Books</h1>
+<h1>Books</h1>
 <ul>
   <% @books.each do |book| %>
-    <li><%= link_to book.title, book_path(book) %></li>
+    <li>
+      <%= link_to book.title, book_path(book) %>
+      (<%= book.available? ? "Available" : "Borrowed" %>)
+    </li>
   <% end %>
 </ul>
