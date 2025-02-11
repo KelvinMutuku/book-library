@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root "books#index"
 
   resources :books, only: [:index, :show] do
-    post 'borrow', to: 'borrowings#create'
-    patch 'return', to: 'borrowings#update'
+    member do
+      post "borrow"
+      post "return"
+    end
   end
 
-  resource :user, only: [:show]
+  get "profile", to: "users#profile", as: :user_profile
 end
