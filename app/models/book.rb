@@ -1,12 +1,11 @@
 class Book < ApplicationRecord
-  validates :title, :author, :isbn, presence: true
-  validates :isbn, uniqueness: true
-
   has_many :borrowings
   has_many :users, through: :borrowings
 
-  # Check if the book is available for borrowing
+  validates :title, :author, :isbn, presence: true
+  validates :isbn, uniqueness: true
+
   def available?
-    borrowings.where(returned_at: nil).empty?
+    !borrowings.exists?(returned: false)
   end
 end

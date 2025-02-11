@@ -3,8 +3,10 @@
 <p><strong>ISBN:</strong> <%= @book.isbn %></p>
 
 <% if @book.available? %>
+  <p style="color: green;">Status: Available ✅</p>
   <%= button_to "Borrow", borrow_book_path(@book), method: :post %>
 <% else %>
+  <p style="color: red;">Status: Borrowed ❌</p>
   <p>This book is currently borrowed.</p>
 <% end %>
 

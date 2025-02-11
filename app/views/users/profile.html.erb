@@ -6,7 +6,12 @@
       <li>
         <strong><%= borrowing.book.title %></strong> by <%= borrowing.book.author %>  
         <br>
-        <strong>Due Date:</strong> <%= borrowing.due_date.strftime("%B %d, %Y") %>  
+        <strong>Due Date:</strong> 
+        <% if borrowing.due_date.present? %>
+          <%= borrowing.due_date.strftime("%B %d, %Y") %>
+        <% else %>
+          <span style="color: red;">Due date not set ❌</span>
+        <% end %>
         <br>
         <%= button_to "Return Book", return_book_path(borrowing.book), method: :post, data: { confirm: "Are you sure you want to return this book?" } %>
       </li>
