@@ -1,0 +1,34 @@
+class Admin::BooksController < ApplicationController
+    before_action :authenticate_user!
+    before_action :check_admin
+  
+    def new
+      @book = Book.new
+    end
+  
+    def create
+      @book = Book.new(book_params)
+      if @book.save
+        redirect_to admin_dashboard_path, notice: "Book added successfully!"
+      else
+        render :new, status: :unprocessable_entity
+      end
+    end
+  
+    def destroy
+      @book = Book.find(params[:id])
+      @book.destroy
+      redirect_to admin_dashboard_path, notice: "Book removed successfully!"
+    end
+  
+    private
+  
+    def check_admin
+      redirect_to root_path, alert: "Access denied." unless current_user.admin?
+    end
+  
+    def book_params
+      params.require(:book).permit(:title, :author, :isbn, :available)
+    end
+  end
+  

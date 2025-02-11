@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   end
 
   get "profile", to: "users#profile", as: :user_profile
+
+  namespace :admin do
+    get "dashboard", to: "dashboard#index"
+    resources :books, only: [:new, :create, :destroy]
+  end
 end
