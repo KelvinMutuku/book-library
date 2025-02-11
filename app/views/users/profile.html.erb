@@ -1,10 +1,18 @@
 <h1>My Borrowed Books</h1>
-<ul>
-  <% @borrowings.each do |borrowing| %>
-    <li>
-      <%= borrowing.book.title %> by <%= borrowing.book.author %>
-      (Due: <%= borrowing.due_date.strftime("%B %d, %Y") %>)
-      <%= button_to "Return", return_book_path(borrowing.book), method: :post %>
-    </li>
-  <% end %>
-</ul>
+
+<% if @borrowings.any? %>
+  <ul>
+    <% @borrowings.each do |borrowing| %>
+      <li>
+        <strong><%= borrowing.book.title %></strong> by <%= borrowing.book.author %>  
+        <br>
+        <strong>Due Date:</strong> <%= borrowing.due_date.strftime("%B %d, %Y") %>  
+        <br>
+        <%= button_to "Return Book", return_book_path(borrowing.book), method: :post, data: { confirm: "Are you sure you want to return this book?" } %>
+      </li>
+      <hr>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You have not borrowed any books.</p>
+<% end %>
