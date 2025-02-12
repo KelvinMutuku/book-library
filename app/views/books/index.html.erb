@@ -1,6 +1,6 @@
 <h1>Books</h1>
 
-<% if @books.any? %>
+<% if @books.present? %>
   <ul>
     <% @books.each do |book| %>
       <li>
@@ -10,5 +10,5 @@
     <% end %>
   </ul>
 <% else %>
-  <p>No books available.</p>
+  <p>No books available. Please check back later.</p>
 <% end %>
