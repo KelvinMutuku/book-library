@@ -1,6 +1,8 @@
 <h1>Admin Panel</h1>
 
-<p>Welcome, <%= current_user.email %>! (<%= link_to "Logout", destroy_user_session_path, method: :delete %>)</p>
+<p>Welcome, <%= current_user.email %>!</p>
+
+<%= link_to "Profile", admin_profile_path, class: "btn btn-warning" %>
 
 <h2>Manage Books</h2>
 

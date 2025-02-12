@@ -1,0 +1,30 @@
+<h1>Admin Profile</h1>
+
+<p><strong>Email:</strong> <%= current_user.email %></p>
+
+<h2>Update Admin Details</h2>
+
+<%= form_with model: @user, url: admin_update_profile_path, method: :patch, local: true do |form| %>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :password %> (leave blank to keep current password)<br>
+    <%= form.password_field :password %>
+  </p>
+
+  <p>
+    <%= form.label :password_confirmation %><br>
+    <%= form.password_field :password_confirmation %>
+  </p>
+
+  <p>
+    <%= form.submit "Update Profile", class: "btn btn-primary" %>
+  </p>
+<% end %>
+
+<p><%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger" %></p>
+
+<%= link_to "Back to Admin Panel", admin_dashboard_path, class: "btn btn-secondary" %>
