@@ -1,0 +1,26 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Sign In</h2>
+
+    <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |form| %>
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.email_field :email, autofocus: true, class: "input-field" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "input-field" %>
+      </div>
+
+      <div class="form-actions">
+        <%= form.submit "Sign In", class: "auth-btn" %>
+      </div>
+    <% end %>
+
+    <div class="extra-links">
+      <%= link_to "Forgot your password?", new_password_path(resource_name), class: "link-text" %> |
+      <%= link_to "Sign up", new_registration_path(resource_name), class: "link-text" %>
+    </div>
+  </div>
+</div>

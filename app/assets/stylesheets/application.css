@@ -155,3 +155,129 @@
 .back-btn:hover {
   text-decoration: underline;
 }
+/* Center the authentication form */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Style the authentication card */
+.auth-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the Sign In button */
+.auth-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Extra links below the form */
+.extra-links {
+  margin-top: 15px;
+}
+
+.link-text {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+/* Center the authentication form */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Style the authentication card */
+.auth-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the Sign Up button */
+.auth-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn:hover {
+  background-color: #218838;
+}
+
+/* Extra links below the form */
+.extra-links {
+  margin-top: 15px;
+}
+
+.link-text {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
