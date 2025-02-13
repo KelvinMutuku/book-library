@@ -281,3 +281,355 @@
 .link-text:hover {
   text-decoration: underline;
 }
+/* Center the authentication form */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Style the authentication card */
+.auth-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the Reset Password button */
+.auth-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-btn:hover {
+  background-color: #138496;
+}
+
+/* Extra links below the form */
+.extra-links {
+  margin-top: 15px;
+}
+
+.link-text {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+/* Center the admin panel */
+.admin-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Admin card */
+.admin-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Admin actions */
+.admin-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Admin buttons */
+.admin-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #138496;
+}
+
+.danger-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.danger-btn:hover {
+  background-color: #c82333;
+}
+
+/* Admin books grid */
+.admin-subheading {
+  margin-top: 40px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.book-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+/* Center the form container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Form card styling */
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+}
+
+/* Style the form buttons */
+.form-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+}
+/* Center the profile container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+/* Profile card styling */
+.profile-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the form buttons */
+.form-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+}
+
+.danger-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.danger-btn:hover {
+  background-color: #c82333;
+}
+/* Admin actions section */
+.admin-actions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the admin buttons */
+.admin-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  border: none;
+}
+
+/* Primary button (Add New Book) */
+.primary-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Danger button (Delete) */
+.danger-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.danger-btn:hover {
+  background-color: #c82333;
+}
+/* Center text globally */
+.center-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Admin actions section */
+.admin-actions {
+  text-align: center;
+  margin-bottom: 20px;
+}

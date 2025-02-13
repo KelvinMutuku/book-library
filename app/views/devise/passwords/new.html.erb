@@ -1,16 +1,21 @@
-<h2>Forgot your password?</h2>
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Forgot Password</h2>
+    <p>Enter your email address, and we'll send you instructions to reset your password.</p>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_with model: resource, as: resource_name, url: password_path(resource_name), local: true do |form| %>
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.email_field :email, autofocus: true, class: "input-field" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="form-actions">
+        <%= form.submit "Send Reset Instructions", class: "auth-btn" %>
+      </div>
+    <% end %>
+
+    <div class="extra-links">
+      <%= link_to "Back to Sign In", new_session_path(resource_name), class: "link-text" %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

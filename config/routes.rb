@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
-
+  
   root "books#index"
 
   resources :books, only: [:index, :show] do
@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     get "dashboard", to: "dashboard#index"
     get "profile", to: "dashboard#profile"
     patch "update_profile", to: "dashboard#update_profile"
-    resources :books, only: [:new, :create, :destroy]
+    resources :books, only: [:index, :new, :create, :destroy]  # Add `index`
   end
+  
   
 end

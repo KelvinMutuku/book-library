@@ -1,16 +1,17 @@
-<h1>Admin Panel</h1>
+<h1 class="center-text">Admin Dashboard</h1>
 
-<p>Welcome, <%= current_user.email %>!</p>
+<div class="admin-actions">
+  <%= link_to "Add New Book", new_admin_book_path, class: "admin-btn primary-btn" %>
+</div>
 
-<h2>Manage Books</h2>
-
-<%= link_to "Add New Book", new_admin_book_path, class: "btn btn-primary" %>
-
-<ul>
+<h2 class="center-text">Manage Books</h2>
+<div class="books-grid">
   <% @books.each do |book| %>
-    <li>
-      <strong><%= book.title %></strong> by <%= book.author %>
-      <%= button_to "Delete", admin_book_path(book), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
-    </li>
+    <div class="book-card">
+      <h3><%= book.title %></h3>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>ISBN:</strong> <%= book.isbn %></p>
+      <%= button_to "Delete", admin_book_path(book), method: :delete, data: { confirm: "Are you sure?" }, class: "admin-btn danger-btn" %>
+    </div>
   <% end %>
-</ul>
+</div>
