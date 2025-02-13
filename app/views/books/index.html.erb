@@ -1,14 +1,16 @@
 <h1>Books</h1>
 
 <% if @books.present? %>
-  <ul>
+  <div class="books-grid">
     <% @books.each do |book| %>
-      <li>
-        <%= link_to book.title, book_path(book) %>  
-        (<%= book.available? ? "Available ✅" : "Borrowed ❌" %>)
-      </li>
+      <div class="book-card">
+        <h3><%= link_to book.title, book_path(book) %></h3>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>ISBN:</strong> <%= book.isbn %></p>
+        <p><strong>Status:</strong> <%= book.available? ? "Available ✅" : "Borrowed ❌" %></p>
+      </div>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p>No books available. Please check back later.</p>
 <% end %>
