@@ -1,23 +1,17 @@
 <h1>My Borrowed Books</h1>
 
-<% if @borrowings.any? %>
-  <ul>
+<% if @borrowings.present? %>
+  <div class="books-grid">
     <% @borrowings.each do |borrowing| %>
-      <li>
-        <strong><%= borrowing.book.title %></strong> by <%= borrowing.book.author %>  
-        <br>
-        <strong>Due Date:</strong> 
-        <% if borrowing.due_date.present? %>
-          <%= borrowing.due_date.strftime("%B %d, %Y") %>
-        <% else %>
-          <span style="color: red;">Due date not set ❌</span>
-        <% end %>
-        <br>
-        <%= button_to "Return Book", return_book_path(borrowing.book), method: :post, data: { confirm: "Are you sure you want to return this book?" } %>
-      </li>
-      <hr>
+      <div class="book-card">
+        <h3><%= link_to borrowing.book.title, book_path(borrowing.book) %></h3>
+        <p><strong>Author:</strong> <%= borrowing.book.author %></p>
+        <p><strong>ISBN:</strong> <%= borrowing.book.isbn %></p>
+        <p><strong>Due Date:</strong> <%= borrowing.due_date.strftime("%B %d, %Y") %></p>
+        <%= button_to "Return Book", return_book_path(borrowing.book), method: :post, class: "return-btn", data: { confirm: "Are you sure you want to return this book?" } %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p>You have not borrowed any books.</p>
 <% end %>
