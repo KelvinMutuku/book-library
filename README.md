@@ -48,7 +48,7 @@ Rails 8.0.0
 
 ### **2️⃣ Clone the Repository**
 ```sh
-git clone <YOUR_GITHUB_REPO_URL>
+git clone <(https://github.com/KelvinMutuku/book-library)>
 cd book-library
 ```
 
