@@ -3,7 +3,7 @@ class Admin::BooksController < ApplicationController
   before_action :check_admin
 
   def new
-    @book = Book.new  # ✅ Ensure a new book instance is available
+    @book = Book.new  
   end
 
   def create

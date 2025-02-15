@@ -1,18 +1,7 @@
-<h1>Manage Books</h1>
+<h1>Welcome to the admin Panel</h1>
 
-<%= link_to "Add New Book", new_admin_book_path, class: "btn btn-primary" %>
 
-<% if @books.present? %>
-  <div class="books-grid">
-    <% @books.each do |book| %>
-      <div class="book-card">
-        <h3><%= book.title %></h3>
-        <p><strong>Author:</strong> <%= book.author %></p>
-        <p><strong>ISBN:</strong> <%= book.isbn %></p>
-        <%= button_to "Delete Book", admin_book_path(book), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
-      </div>
-    <% end %>
-  </div>
-<% else %>
-  <p>No books available. Please add some books first.</p>
-<% end %>
+
+
+  <p>Add or remove books by clicking manage books on the navbar</p>
+
