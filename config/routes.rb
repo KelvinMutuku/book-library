@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get "dashboard", to: "dashboard#index"
     get "profile", to: "dashboard#profile"
     patch "update_profile", to: "dashboard#update_profile"
-    resources :books, only: [:index, :new, :create, :destroy]  # Add `index`
+    resources :books, only: [:index, :new, :create, :destroy]  
   end
   
   

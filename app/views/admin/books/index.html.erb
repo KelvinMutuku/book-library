@@ -1,32 +1,18 @@
-<div class="form-container">
-  <div class="form-card">
-    <h2>Add a New Book</h2>
+<h1>Manage Books</h1>
 
-    <%= form_with model: @book, url: admin_books_path, local: true do |form| %>
-      <div class="form-group">
-        <%= form.label :title %>
-        <%= form.text_field :title, class: "input-field", placeholder: "Enter book title" %>
-      </div>
+<%= link_to "Add New Book", new_admin_book_path, class: "btn btn-primary" %>
 
-      <div class="form-group">
-        <%= form.label :author %>
-        <%= form.text_field :author, class: "input-field", placeholder: "Enter author's name" %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :isbn %>
-        <%= form.text_field :isbn, class: "input-field", placeholder: "Enter ISBN number" %>
-      </div>
-
-      <div class="form-group checkbox-group">
-        <%= form.label :available, "Available" %>
-        <%= form.check_box :available, class: "checkbox-input" %>
-      </div>
-
-      <div class="form-actions">
-        <%= form.submit "Add Book", class: "form-btn primary-btn" %>
-        <%= link_to "Back to Manage Books", admin_books_path, class: "form-btn secondary-btn" %>
+<% if @books.present? %>
+  <div class="books-grid">
+    <% @books.each do |book| %>
+      <div class="book-card">
+        <h3><%= book.title %></h3>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>ISBN:</strong> <%= book.isbn %></p>
+        <%= button_to "Delete Book", admin_book_path(book), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
       </div>
     <% end %>
   </div>
-</div>
+<% else %>
+  <p>No books available. Please add some books first.</p>
+<% end %>
